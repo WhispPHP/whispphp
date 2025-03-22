@@ -1,0 +1,6 @@
+<a href="{{ homepage }}" class="flex items-center align-middle gap-x-2 no-underline text-blue-100 text-4xl">
+    {{ site_settings:full_logo }}
+    <img src="{{ url }}" alt="{{ alt ?? site_settings:site_name }}" class="h-16" aria-hidden="true" />
+    {{ /site_settings:full_logo }}
+    <div class="">{{ site_settings:site_name /}}</div>
+</a>

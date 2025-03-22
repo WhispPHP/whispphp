@@ -1,0 +1,7 @@
+title: 'Site Settings'
+data:
+  site_name: Whisp
+  full_logo: branding/logo.png
+  favicon: branding/logo.png
+  footer_text: 'Whisp is a pure PHP SSH server built specifically for TUIs.'
+  github_url: 'https://github.com/whispphp/whisp'
