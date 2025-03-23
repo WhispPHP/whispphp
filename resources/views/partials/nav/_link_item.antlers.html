@@ -1,8 +1,11 @@
 <a
     href="{{ url }}"
-    class="w-full truncate {{ is_current ? view:active_classes : view:inactive_classes }}"
+    class="flex items-center gap-x-1.5 w-full truncate {{ is_current ? view:active_classes : view:inactive_classes }}"
     aria-label="{{ title | entities }}"
     title="{{ title | entities }}"
 >
+{{ if menu_icon }}
+{{ svg :src="menu_icon" class="w-4 h-4 dark:text-white" aria-hidden="true" /}}
+{{ /if }}
     {{ title | entities }}
 </a>

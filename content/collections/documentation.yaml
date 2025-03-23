@@ -1,8 +1,8 @@
-title: 'Whisp V1 Docs'
+title: 'Whisp 1.0.0 Docs'
 template: documentation/show
 layout: layout
 revisions: false
-route: 'docs/v1/{slug}'
+route: 'docs/1.0.0/{slug}'
 date: true
 sort_dir: asc
 date_behavior:

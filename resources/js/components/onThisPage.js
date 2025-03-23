@@ -24,7 +24,7 @@ export function initOnThisPage() {
     for (var i = 0; i < headings.length; i++) {
         var heading = headings[i].parentElement,
             level = parseInt(heading.tagName.charAt(1)),
-            innerText = heading.innerText.substring(1),
+            innerText = heading.innerText.substring(0, heading.innerText.length - 1),
             tocEntry = document.createElement('li'),
             tocLink = document.createElement('a');
 

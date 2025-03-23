@@ -14,21 +14,22 @@
 
 .heading-permalink {
     text-decoration: none;
-    margin-right: 0.2em;
-    opacity: 0.4;
+    margin-left: 0.5rem;
     transition-duration: 200ms;
+    color: transparent;
 }
 
 .prose a.heading-permalink {
-    color: #44a0ff;
+    color: transparent;
 }
 
 .heading-permalink:hover {
     opacity: 1;
+    color: #44a0ff;
 }
 
 .toc-link {
-    @apply space-y-2 inline-block truncate hover:bg-gray-100 dark:hover:bg-gray-600 px-3 py-1 max-w-full mb-1 dark:text-white hover:border-l-4 hover:border-purple-400;
+    @apply space-y-2 inline-block truncate hover:bg-gray-100 dark:hover:bg-gray-600 px-3 py-1 max-w-full mb-1 dark:text-white border-l-4 border-transparent hover:border-purple-400;
 }
 
 .toc-link.active {

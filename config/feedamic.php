@@ -28,7 +28,6 @@ return [
             'alt_url' => '',
             'collections' => [
                 'documentation',
-                'v0.0.1',
                 // Add additional collections here.
             ],
             'taxonomies' => [],

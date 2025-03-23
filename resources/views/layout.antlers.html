@@ -5,7 +5,7 @@
         {{ partial:meta/meta /}}
         <script>
             var _themePref = localStorage.getItem('themePreference');
-        
+
             if (_themePref == 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
                 document.documentElement.classList.add('dark');
             }
@@ -28,7 +28,7 @@
                  x-transition.duration.500ms>
             </div>
             {{ if current_template == 'documentation/show' }}
-                <div class="container mx-auto max-w-7xl flex justify-center mt-4 px-4 xl:px-0 md:min-h-screen">
+                <div class="container mx-auto max-w-7xl flex justify-center py-12 px-4 xl:px-2 md:min-h-screen">
                     {{ partial:left_sidebar /}}
                     <div class="flex w-full flex-col lg:flex-row">
                         <div class="flex-1 min-w-0 px-4 pb-8">

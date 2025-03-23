@@ -18,9 +18,10 @@ return [
     'configs' => [
 
         'default' => [
-            // 'heading_permalink' => [
-            //     'symbol' => '#',
-            // ],
+            'heading_permalink' => [
+                'symbol' => '#',
+                'insert' => 'after',
+            ],
         ],
 
     ],

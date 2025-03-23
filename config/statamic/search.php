@@ -35,7 +35,6 @@ return [
             'driver' => 'local',
             'searchables' => [
                 'docs:documentation',
-                'docs:v0.0.1',
             ],
             'fields' => [
                 'title',

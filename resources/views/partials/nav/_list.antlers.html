@@ -1,6 +1,6 @@
 ---
-active_classes: 'active-menu-item truncate text-gray-950 dark:text-white border-l-4 border-cyan-500 dark:bg-slate-700 font-semibold py-1 px-3'
-inactive_classes: 'truncate text-gray-950 dark:text-white py-1 px-3 hover:border-l-4 hover:border-cyan-200 hover:bg-gray-100 dark:hover:bg-gray-600'
+active_classes: 'active-menu-item truncate text-gray-950 dark:text-white border-l-4 border-cyan-500 dark:bg-slate-700 font-semibold py-1 px-2'
+inactive_classes: 'truncate text-gray-950 dark:text-white py-1 px-3 border-l-4 border-transparent hover:border-cyan-200 hover:bg-gray-100 dark:hover:bg-gray-600'
 ---
 
 {{ if is_section || children }}
@@ -19,7 +19,7 @@ inactive_classes: 'truncate text-gray-950 dark:text-white py-1 px-3 hover:border
                 {{ /if }}
             </div>
 
-            <ul class="space-y-2 pl-4">
+            <ul class="space-y-2 border-l ml-[1.25rem] pl-[0.75rem]">
                 {{ children }}
                     <li>
                         {{ partial:nav/link_item /}}
@@ -37,7 +37,7 @@ inactive_classes: 'truncate text-gray-950 dark:text-white py-1 px-3 hover:border
         </li>
     {{ /if }}
 {{ else }}
-    <li class="flex max-w-fit items-center space-x-2">
-        {{ partial:nav/link_item /}}
+    <li class="flex items-center space-x-1">
+        {{ partial:nav/link_item :menu_icon="menu_icon" /}}
     </li>
 {{ /if }}

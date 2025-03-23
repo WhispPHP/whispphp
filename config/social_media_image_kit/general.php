@@ -71,7 +71,6 @@ return [
 
     'collections' => [
         'documentation',
-        'v0.0.1',
         'pages',
     ],
 
