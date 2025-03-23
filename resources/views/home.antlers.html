@@ -1,12 +1,27 @@
-<div class="relative pt-24 overflow-hidden bg-gray-200 dark:bg-gray-950 md:pb-24">
+<div class="relative pt-16 sm:pt-24 overflow-hidden bg-gray-200 dark:bg-gray-950 md:pb-24">
     {{#
     {{ svg:blobs class="hidden absolute md:block top-0 left-0 right-0 bottom-0 z-0 touch-none pointer-events-none" /}}
     #}}
 
     <div class="relative container mx-auto max-w-7xl px-4 pb-12 md:pb-0 z-10">
         <div class="flex flex-wrap -m-6">
-            <div class="w-full p-6 text-gray-800 dark:text-gray-300">
-                <h2 class="mb-16 max-w-xl mx-auto font-heading font-bold text-center text-4xl sm:text-5xl text-gray-800 dark:text-gray-300">Whisp, a pure PHP SSH server for TUIs</h2>
+            <div class="w-full px-6 pb-6 text-gray-800 dark:text-gray-300">
+
+                <img src="/assets/branding/logo.png" class="h-16 md:h-32 w-auto mx-auto mb-2" />
+                <h2 class="mb-12 max-w-xl mx-auto font-heading font-bold text-center text-4xl sm:text-5xl text-gray-800 dark:text-gray-300">Whisp, a pure PHP SSH server for TUIs</h2>
+
+                <div class="flex justify-center space-x-4 mb-16">
+                    {{ partial:herobutton
+                        style="primary"
+                        text="Get started"
+                        link="/docs/1.0.0/whisp-overview"
+                    }}
+                    {{ partial:herobutton
+                        style="secondary"
+                        text="View on GitHub"
+                        link="https://github.com/whispphp/whisp"
+                    }}
+                </div>
 
 ## How to change existing server's ssh server to a diff. port
 

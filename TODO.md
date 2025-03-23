@@ -1,0 +1,2 @@
+- [ ] Cmd+K algolia/typesense search
+- [ ]

@@ -2,12 +2,13 @@
     <div class="container max-w-7xl mx-auto flex items-center justify-between">
         <div class="flex md:hidden">
             <button
+                class="p-3"
                     @click="menuOpen = true" class="text-white"
                     aria-haspopup="true"
                     x-bind:aria-expanded="menuOpen ? 'true' : 'false'"
                     aria-label="{{ trans:site_general.open_navigation_panel }}"
                     aria-controls="leftNavigationMenu">
-                {{ svg:hero-icons/outline/bars-3 class="w-6 h-6 stroke-slate-800 dark:stroke-white" aria-hidden="true" /}}
+                {{ svg:hero-icons/outline/bars-3 class="w-6 h-6 text-slate-800 dark:text-white" aria-hidden="true" /}}
             </button>
         </div>
 
@@ -18,7 +19,7 @@
         <div class="hidden sm:flex items-center space-x-2">
             <div class="w-full">
                 <form class="flex items-center p-3 border border-slate-700 dark:border-gray-200 h-12 bg-white dark:bg-slate-900 rounded-lg text-white" method="get" action="/search">
-                    {{ svg:hero-icons/outline/magnifying-glass class="text-slate-600 dark:text-white w-5 h-4" aria-hidden="true" /}}
+                    {{ svg:hero-icons/outline/magnifying-glass class="text-slate-800 dark:text-white w-5 h-4" aria-hidden="true" /}}
                     <input
                            type="text" id="search"
                            aria-label="{{ trans:search.search_documentation }}"
