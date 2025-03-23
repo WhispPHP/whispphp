@@ -9,7 +9,11 @@ module.exports = {
   ],
   darkMode: 'class',
   theme: {
-    extend: {},
+    extend: {
+        colors: {
+            'brand-yellow': '#F2C94C',
+        },
+    },
   },
   corePlugins: {
     aspectRatio: false,

@@ -17,14 +17,15 @@
 
         <div class="hidden sm:flex items-center space-x-2">
             <div class="w-full">
-                <form class="flex items-center p-3 border border-gray-200 dark:border-gray-600 h-12 bg-slate-900 rounded-lg text-white" method="get" action="/search">
-                    {{ svg:hero-icons/outline/magnifying-glass class="stroke-gray-200 w-5 h-4" aria-hidden="true" /}}
+                <form class="flex items-center p-3 border dark:border-gray-200 border-slate-800 h-12 bg-brand-yellow dark:bg-slate-900 rounded-lg text-white" method="get" action="/search">
+                    {{ svg:hero-icons/outline/magnifying-glass class="stroke-slate-800 dark:stroke-gray-200  w-5 h-4" aria-hidden="true" /}}
                     <input
                            type="text" id="search"
                            aria-label="{{ trans:search.search_documentation }}"
                            placeholder="{{ trans:search.search_documentation_placeholder }}"
-                           class="focus:outline-none w-full px-3 bg-slate-900"
-                           name="q" />
+                           class="focus:outline-none w-full px-3 placeholder:text-slate-800 dark:placeholder:text-slate-200 bg-brand-yellow dark:bg-slate-900"
+                           name="q"
+                           autocomplete="off" />
                 </form>
             </div>
         </div>
@@ -32,14 +33,14 @@
             <ul class="flex items-center flex-row space-x-3 text-lg" role="navigation">
                 <li class="inline-block md:hidden">
                     <a href="{{ link to='search' /}}" title="{{ trans:search.search }}">
-                        {{ svg:hero-icons/outline/magnifying-glass class="w-6 h-6 stroke-white" aria-hidden="true" /}}
+                        {{ svg:hero-icons/outline/magnifying-glass class="w-6 h-6 dark:font-white stroke-slate-800" aria-hidden="true" /}}
                     </a>
                 </li>
 
                 {{ nav:main select="title|url|slug" include_home="false" as="nav_items" }}
                     {{ unless no_results }}
                         {{ nav_items }}
-                            <li class="text-white hidden md:inline {{ if is_current || is_parent }}font-semibold{{ else }}font-thin{{ /if }}">
+                            <li class="text-slate-800 dark:text-white hover:opacity-80 hidden md:inline {{ if is_current || is_parent }}font-semibold{{ /if }}">
                                 <a href="{{ url }}" title="{{ title | entities }}">{{ title }}</a>
                             </li>
                         {{ /nav_items }}
@@ -47,18 +48,18 @@
                 {{ /nav:main }}
                 {{ if site_settings:github_url }}
                     <li>
-                        <a href="{{ site_settings:github_url }}" aria-label="{{ trans:header.visit_github_repository }}">
-                            {{ svg:github class="w-6 h-6 fill-white" aria-hidden="true" /}}
+                        <a href="{{ site_settings:github_url }}" class="hover:opacity-80" aria-label="{{ trans:header.visit_github_repository }}">
+                            {{ svg:github class="w-6 h-6 fill-slate-800 dark:fill-white " aria-hidden="true" /}}
                         </a>
                     </li>
                 {{ /if }}
                 <a-dropdown-menu
-                                 class="text-white"
+                                 class="text-slate-800 dark:text-white hover:opacity-80"
                                  label="{{ trans:header.open_color_scheme_picker }}"
                                  close-on-selection="true">
                     <a-slot:trigger>
-                        {{ svg:hero-icons/outline/sun class="h-6 w-6 fill-white" x-show="effectiveTheme == 'light'" aria-hidden="true" sanitize="false" /}}
-                        {{ svg:hero-icons/outline/moon class="h-6 w-6 fill-white" x-show="effectiveTheme == 'dark'" aria-hidden="true" sanitize="false" /}}
+                        {{ svg:hero-icons/outline/sun class="h-6 w-6 fill-slate-800 dark:fill-white" x-show="effectiveTheme == 'light'" aria-hidden="true" sanitize="false" /}}
+                        {{ svg:hero-icons/outline/moon class="h-6 w-6 fill-slate-800 dark:fill-white" x-show="effectiveTheme == 'dark'" aria-hidden="true" sanitize="false" /}}
                         <span class="sr-only">{{ trans:header.open_color_scheme_picker }}</span>
                     </a-slot:trigger>
                     <a-slot:items>
