@@ -10,6 +10,7 @@
                 document.documentElement.classList.add('dark');
             }
         </script>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
         {{ vite src="resources/js/site.js|resources/css/site.css" }}
     </head>
     <body
@@ -17,7 +18,7 @@
           class="bg-white dark:bg-slate-900 font-sans h-screen"
           :class="{ 'overflow-hidden': menuOpen, 'mr-4': menuOpen && scrollbarVisible }">
         <div id="site-content">
-            <div class="bg-[#F2C94C] dark:bg-slate-950 text-slate-900 dark:text-slate-100">
+            <div class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
                 {{ partial:header /}}
                 {{ yield:header_content /}}
             </div>

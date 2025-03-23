@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite';
 import Dotenv from 'dotenv';
 import laravel from 'laravel-vite-plugin';
-import mkcert from 'vite-plugin-mkcert'
 Dotenv.config();
 
 export default defineConfig({
@@ -17,16 +16,6 @@ export default defineConfig({
             ],
             refresh: true,
         }),
-        mkcert()
         // vue2(),
     ],
-    server: {
-        https: true,
-        hmr: {
-            host: process.env.APP_URL.replace('https://', ''),
-        },
-        cors: {
-            origin: process.env.APP_URL,
-        }
-    }
 });

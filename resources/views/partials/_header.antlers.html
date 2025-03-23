@@ -7,7 +7,7 @@
                     x-bind:aria-expanded="menuOpen ? 'true' : 'false'"
                     aria-label="{{ trans:site_general.open_navigation_panel }}"
                     aria-controls="leftNavigationMenu">
-                {{ svg:hero-icons/outline/bars-3 class="w-6 h-6 stroke-white" aria-hidden="true" /}}
+                {{ svg:hero-icons/outline/bars-3 class="w-6 h-6 stroke-slate-800 dark:stroke-white" aria-hidden="true" /}}
             </button>
         </div>
 
@@ -17,13 +17,13 @@
 
         <div class="hidden sm:flex items-center space-x-2">
             <div class="w-full">
-                <form class="flex items-center p-3 border dark:border-gray-200 border-slate-800 h-12 bg-brand-yellow dark:bg-slate-900 rounded-lg text-white" method="get" action="/search">
-                    {{ svg:hero-icons/outline/magnifying-glass class="stroke-slate-800 dark:stroke-gray-200  w-5 h-4" aria-hidden="true" /}}
+                <form class="flex items-center p-3 border border-slate-700 dark:border-gray-200 h-12 bg-white dark:bg-slate-900 rounded-lg text-white" method="get" action="/search">
+                    {{ svg:hero-icons/outline/magnifying-glass class="text-slate-600 dark:text-white w-5 h-4" aria-hidden="true" /}}
                     <input
                            type="text" id="search"
                            aria-label="{{ trans:search.search_documentation }}"
                            placeholder="{{ trans:search.search_documentation_placeholder }}"
-                           class="focus:outline-none w-full px-3 placeholder:text-slate-800 dark:placeholder:text-slate-200 bg-brand-yellow dark:bg-slate-900"
+                           class="focus:outline-none w-full px-3 placeholder:text-slate-500 dark:placeholder:text-slate-200 bg-white dark:bg-slate-900"
                            name="q"
                            autocomplete="off" />
                 </form>
@@ -49,7 +49,7 @@
                 {{ if site_settings:github_url }}
                     <li>
                         <a href="{{ site_settings:github_url }}" class="hover:opacity-80" aria-label="{{ trans:header.visit_github_repository }}">
-                            {{ svg:github class="w-6 h-6 fill-slate-800 dark:fill-white " aria-hidden="true" /}}
+                            {{ svg:github class="w-6 h-6 text-slate-800 dark:text-white" aria-hidden="true" /}}
                         </a>
                     </li>
                 {{ /if }}
