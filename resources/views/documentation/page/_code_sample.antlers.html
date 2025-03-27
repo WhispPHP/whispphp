@@ -2,7 +2,7 @@
     {{ code_sample }}
     <pre
         class="
-            {{ 'language-{ (language_override ? language_override : mode) | se_cm_to_hljs }' }}
+            {{ 'relative language-{ (language_override ? language_override : mode) | se_cm_to_hljs }' }}
         "
     >
         {{ if file_name }}
@@ -13,6 +13,10 @@
                 </p>
             </div>
         {{ /if }}
+        <button class="absolute top-1/2 -translate-y-1/2 right-2 ml-auto p-1 text-gray-300 hover:text-slate-100 flex items-center justify-center" x-data="{ copied: false }" x-on:click="$clipboard('{{ code }}').then(() => copied = true); setTimeout(() => copied = false, 1500)">
+            {{ svg:hero-icons/outline/check-circle x-transition x-show="copied" class="w-7 h-7 text-sky-500" aria-hidden="true" /}}
+            {{ svg:hero-icons/outline/clipboard x-show="!copied" class="w-7 h-7" aria-hidden="true" /}}
+        </button>
         <code>{{ code | entities }}</code>
     </pre>
     {{ /code_sample }}

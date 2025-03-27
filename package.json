@@ -17,6 +17,7 @@
         "vite-plugin-mkcert": "^1.17.8"
     },
     "dependencies": {
+        "@ryangjchandler/alpine-clipboard": "^2.3.0",
         "alpinejs": "^3.13.1",
         "highlight.js": "^11.8.0",
         "highlightjs-antlers": "0.0.1",

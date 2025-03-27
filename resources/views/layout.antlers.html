@@ -14,9 +14,9 @@
     </head>
     <body
           x-data="siteData()" x-init="init()"
-          class="bg-white dark:bg-slate-900 font-sans h-screen"
+          class="bg-white dark:bg-slate-900 font-sans h-screen flex flex-col"
           :class="{ 'overflow-hidden': menuOpen, 'mr-4': menuOpen && scrollbarVisible }">
-        <div id="site-content">
+        <div id="site-content" class="grow">
             <div class="bg-white dark:bg-slate-900 text-slate-900 dark:text-white">
                 {{ partial:header /}}
                 {{ yield:header_content /}}
@@ -45,7 +45,7 @@
                 {{ template_content }}
             {{ /if }}
         </div>
-        <footer id="site-footer" class="bg-gray-100 dark:bg-black print:hidden py-8">
+        <footer id="site-footer" class="bg-gray-100/30 dark:bg-black print:hidden py-8">
             {{ partial:footer /}}
         </footer>
     </body>
