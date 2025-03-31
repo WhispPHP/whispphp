@@ -13,10 +13,10 @@ label: ''
     @click.away="hideMenu()"
     @keydown="handleKeydown($event)"
 >
-    <button 
+    <button
         @click="open = !open"
         aria-haspopup="true"
-        :aria-expanded="open.toString()" 
+        :aria-expanded="open.toString()"
         class="{{ class }}"
         aria-label="{{ label | entities }}"
         aria-controls="{{ _id }}"
@@ -35,9 +35,9 @@ label: ''
         x-transition:leave="transition-transform transition-opacity ease-in duration-200"
         x-transition:leave-start="opacity-100 transform scale-100"
         x-transition:leave-end="opacity-0 transform scale-95"
-        role="menu" 
+        role="menu"
         aria-orientation="vertical"
-        class="absolute w-56 bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-900 divide-y divide-gray-100 rounded-md shadow-lg z-10 mt-7"
+        class="absolute w-56 bg-white dark:bg-slate-800 border border-gray-200 dark:border-gray-900 divide-y divide-gray-100 rounded-md shadow-lg z-20 mt-7"
         :class="alignRight ? 'right-0' : 'left-0'"
         @click="handleGeneralClick($event)"
     >

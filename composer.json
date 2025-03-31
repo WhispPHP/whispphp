@@ -14,6 +14,7 @@
         "laravel/framework": "^12.0",
         "laravel/tinker": "^2.10.1",
         "mitydigital/feedamic": "^2.3",
+        "phiki/phiki": "^1.1",
         "statamic/cms": "^5.0",
         "stillat/antlers-components": "^2.2",
         "stillat/documentation-search": "^1.1",
