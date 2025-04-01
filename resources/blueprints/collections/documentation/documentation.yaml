@@ -19,12 +19,7 @@ tabs:
               type: markdown
               display: Content
               localizable: true
-              instructions_position: above
-              listable: hidden
-              visibility: visible
-              replicator_preview: true
               container: assets
-              restrict: false
               buttons:
                 - bold
                 - italic
@@ -35,14 +30,6 @@ tabs:
                 - image
                 - table
                 - asset
-              automatic_line_breaks: true
-              automatic_links: false
-              escape_markup: false
-              heading_anchors: false
-              smartypants: false
-              table_of_contents: false
-              antlers: false
-              hide_display: false
   meta:
     display: SEO
     sections:
@@ -51,6 +38,11 @@ tabs:
         fields:
           -
             import: page_metadata
+          -
+            handle: subtitle
+            field:
+              type: text
+              display: subtitle
   related_information:
     display: 'Related Information'
     sections:
@@ -60,16 +52,8 @@ tabs:
           -
             handle: related_articles
             field:
-              mode: default
-              create: true
               type: entries
               display: 'Related Articles'
-              icon: entries
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
   sidebar:
     display: Sidebar
     sections:
@@ -80,6 +64,7 @@ tabs:
             field:
               type: slug
               localizable: true
+              validate: 'max:200'
           -
             handle: parent
             field:
@@ -91,3 +76,11 @@ tabs:
               localizable: true
           -
             import: docs_navigation_items
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required

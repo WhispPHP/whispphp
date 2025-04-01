@@ -3,6 +3,7 @@
 @import "tailwindcss/utilities";
 @import "syntax-highlighting.css";
 @import "print.css";
+@import url(https://fonts.bunny.net/css?family=montserrat:900);
 
 [x-cloak] {
     display: none !important;

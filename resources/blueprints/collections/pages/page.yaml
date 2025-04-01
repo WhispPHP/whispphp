@@ -21,6 +21,11 @@ tabs:
         fields:
           -
             import: page_metadata
+          -
+            handle: subtitle
+            field:
+              type: text
+              display: subtitle
   sidebar:
     display: Sidebar
     sections:
@@ -31,6 +36,7 @@ tabs:
             field:
               type: slug
               localizable: true
+              validate: 'max:200'
           -
             handle: parent
             field:

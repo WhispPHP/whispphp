@@ -9,8 +9,8 @@ tabs:
             handle: title
             field:
               type: text
-              localizable: true
               required: true
+              localizable: true
               validate:
                 - required
           -
@@ -23,6 +23,11 @@ tabs:
         fields:
           -
             import: page_metadata
+          -
+            handle: subtitle
+            field:
+              type: text
+              display: subtitle
   related_information:
     display: 'Related Information'
     sections:
@@ -32,16 +37,8 @@ tabs:
           -
             handle: related_articles
             field:
-              mode: default
-              create: true
               type: entries
               display: 'Related Articles'
-              icon: entries
-              listable: hidden
-              instructions_position: above
-              visibility: visible
-              replicator_preview: true
-              hide_display: false
   sidebar:
     display: Sidebar
     sections:
@@ -52,6 +49,7 @@ tabs:
             field:
               type: slug
               localizable: true
+              validate: 'max:200'
           -
             handle: parent
             field:
@@ -63,3 +61,11 @@ tabs:
               localizable: true
           -
             import: docs_navigation_items
+          -
+            handle: date
+            field:
+              type: date
+              required: true
+              default: now
+              validate:
+                - required

@@ -13,6 +13,9 @@ module.exports = {
         colors: {
             'brand-yellow': '#F2C94C',
         },
+        fontFamily: {
+            montserrat: ['Montserrat', 'sans-serif'],
+        },
     },
   },
   corePlugins: {
